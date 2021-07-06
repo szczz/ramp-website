@@ -7,7 +7,8 @@ module.exports = {
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        'no-dupe-class-members': 'off' // `no-dupe-class-members` complains when function overloads are used
+        'no-dupe-class-members': 'off', // `no-dupe-class-members` complains when function overloads are used
+        'prettier/prettier': ['error', { endOfLine: 'auto' }]
     },
     parserOptions: {
         parser: '@typescript-eslint/parser'
