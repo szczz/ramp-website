@@ -3,19 +3,21 @@
         <span class="flex-grow" />
         <img
             src="../../assets/ramp-placeholder.png"
-            class="w-[41%] mr-20"
+            class="w-[41%] mr-[20px]"
             v-if="index % 2 !== 0"
         />
         <div class="prose w-[25%]" :class="{ 'text-right': index % 2 !== 0 }">
             <h2>
                 {{ $t(`feature.${section.key}.title`) }}
             </h2>
-            <p class="!mb-36">{{ $t(`feature.${section.key}.description`) }}</p>
+            <p class="!mb-[36px]">
+                {{ $t(`feature.${section.key}.description`) }}
+            </p>
             <a
                 class="
                     bg-teal
-                    py-12
-                    px-30
+                    py-[12px]
+                    px-[30px]
                     rounded-lg
                     border-gray-500 border
                     focus:bg-teal-dark
@@ -29,7 +31,7 @@
         </div>
         <img
             src="../../assets/ramp-placeholder.png"
-            class="w-[41%] ml-20"
+            class="w-[41%] ml-[20px]"
             v-if="index % 2 === 0"
         />
         <span class="flex-grow" />

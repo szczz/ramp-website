@@ -14,11 +14,11 @@
                 >
                     <div
                         v-for="(subSection, index) in row"
-                        :key="subSection.title + index"
-                        class="flex-1 mx-20"
+                        :key="subSection + index"
+                        class="flex-1 mx-[20px]"
                     >
                         <img
-                            src="../../assets/logo.svg"
+                            :src="`./img/${subSection}.svg`"
                             class="max-h-[120px] !mb-0 inline-flex"
                         />
                         <h3>

@@ -1,7 +1,7 @@
 <template>
     <div class="flex bg-teal items-center">
         <span class="flex-grow" />
-        <img src="../assets/logo.svg" class="h-100" />
+        <img src="../assets/logo.svg" class="h-[100px]" />
         <span style="flex-grow: 3" />
         <a class="focus:bg-teal-dark hover:bg-teal-dark" href="#features">
             {{ $t('header.features') }}
@@ -36,6 +36,6 @@ export default class RampHeaderV extends Vue {}
 
 <style scoped lang="scss">
 a {
-    @apply px-16 py-22 mx-4 my-12 text-2xl rounded-lg;
+    @apply px-[16px] py-[22px] mx-[4px] my-[12px] text-2xl rounded-lg;
 }
 </style>

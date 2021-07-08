@@ -2,7 +2,10 @@
     <div class="glider-contain !w-[1000px] !my-[150px]">
         <div class="glider">
             <div v-for="num in [1, 2, 3, 4]" :key="num">
-                <img class="h-500" src="../../assets/ramp-placeholder.png" />
+                <img
+                    class="h-[500px]"
+                    src="../../assets/ramp-placeholder.png"
+                />
             </div>
         </div>
         <!--button aria-label="Previous" class="glider-prev">«</button-->
@@ -39,13 +42,8 @@ export default class CarouselV extends Vue {
 </script>
 
 <style lang="scss">
-.glider > span {
-    height: 500px;
-    width: 1000px;
-}
-
 .glider-dot {
-    @apply bg-green border border-solid border-gray-500 w-20 h-20 #{!important};
+    @apply bg-green border border-solid border-gray-500 w-[20px] h-[20px] #{!important};
     &:focus {
         @apply border-black border-2 #{!important};
     }

@@ -10,7 +10,7 @@
                 <div
                     v-for="(subSection, subIndex) in section.sections"
                     :key="subSection + subIndex"
-                    class="flex-1 mx-20 px-[20px]"
+                    class="flex-1 mx-[20px] px-[20px]"
                     :class="
                         subIndex % 2 === 0
                             ? 'bg-green'
@@ -23,8 +23,8 @@
                         {{ $t(`multi.${section.key}.${subSection}.title`) }}
                     </h3>
                     <img
-                        src="../../assets/logo.svg"
-                        class="!mb-0 inline-flex py-[40px]"
+                        :src="`./img/${subSection}.svg`"
+                        class="!mb-0 h-[300px] inline-flex py-[40px]"
                     />
                     <p class="!mb-[32px]">
                         {{

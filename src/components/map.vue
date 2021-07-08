@@ -1,13 +1,13 @@
 <template>
-    <div class="ramp-map bg-center h-[725px] flex items-center w-full">
+    <div class="ramp-map bg-center bg-cover h-[725px] flex items-center w-full">
         <span style="flex-grow: 3.5" />
         <div
             class="
                 bg-light-blue
                 border-white border
-                h-450
-                w-500
-                p-40
+                h-[450px]
+                w-[500px]
+                p-[40px]
                 top-1/5
                 prose
                 text-center
@@ -16,17 +16,16 @@
                 justify-center
             "
         >
-            <i18n path="map.title" tag="h1">
-                <span>{{ $t('map.title.extra') }}</span>
-            </i18n>
-            <p class="!mt-0">
+            <h1>{{ $t('map.title') }}</h1>
+
+            <p class="!mt-[0px]">
                 {{ $t('map.description') }}
             </p>
             <a
                 class="
                     border-gray-500
                     rounded-lg
-                    p-12
+                    p-[12px]
                     border-2
                     font-bold
                     focus:bg-light-blue-dark
