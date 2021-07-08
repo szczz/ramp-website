@@ -1,0 +1,48 @@
+key,enValue,enValid,frValue,frValid
+button.requestDemo,Request a Demo,1,Request a Demo,0
+button.viewDemo,View Demo,1,View Demo,0
+header.features,Features,1,Features,0
+header.portfolio,Portfolio,1,Portfolio,0
+header.github,GitHub,1,GitHub,0
+header.getInTouch,Get in Touch,1,Get in Touch,0
+map.title,The Reusable Accessible Mapping Platform ({0}),1,The Reusable Accessible Mapping Platform ({0}),0
+map.title.extra,RAMP,1,RAMP,0
+map.description,"RAMP provides an attractive, feature-rich, standards-compliant mapping interface for accessing and displaying your geospatial data. Developed in-house at Environment and Climate Change Canada, RAMP has been the web GIS visualization solution for Canadians and Federal departments for over 10 years.",1,"RAMP provides an attractive, feature-rich, standards-compliant mapping interface for accessing and displaying your geospatial data. Developed in-house at Environment and Climate Change Canada, RAMP has been the web GIS visualization solution for Canadians and Federal departments for over 10 years.",0
+feature.displayData.title,Display Multiple Types of Data,1,Display Multiple Types of Data,0
+feature.displayData.description,"RAMP supports popular geospatial datatypes, via web services or static files you can upload. RAMP can ingest Esri™ Feature/Map services, OGC WMS, WFS, GeoJSON, CSV, and many more.",1,"RAMP supports popular geospatial datatypes, via web services or static files you can upload. RAMP can ingest Esri™ Feature/Map services, OGC WMS, WFS, GeoJSON, CSV, and many more.",0
+feature.dataAnalysis.title,Data Mashups & Analysis,1,Data Mashups & Analysis,0
+feature.dataAnalysis.description,"Datasets can be overlaid and combined in a RAMP-based application. Leverage RAMP to compare datasets from different sources and display them concurrently in a common mapping interface.",1,"Datasets can be overlaid and combined in a RAMP-based application. Leverage RAMP to compare datasets from different sources and display them concurrently in a common mapping interface.",0
+feature.dataExtraction.title,Clip/Zip/Ship Data Extractions,1,Clip/Zip/Ship Data Extractions,0
+feature.dataExtraction.description,"Filter your geospatial data and extract customized views through the RAMP data-grid functionality.",1,"Filter your geospatial data and extract customized views through the RAMP data-grid functionality.",0
+feature.context.title,Provide Context for Your Data,1,Provide Context for Your Data,0
+feature.context.description,"A suite of basemaps from Esri™ and Natural Resources Canada help contextualize your geospatial data, or add your own! Custom extents and shortcuts make your data easy to find and visualize.",1,"A suite of basemaps from Esri™ and Natural Resources Canada help contextualize your geospatial data, or add your own! Custom extents and shortcuts make your data easy to find and visualize.",0
+feature.accessible.title,WCAG Accessible - Without the "Clunk",1,WCAG Accessible - Without the "Clunk",0
+feature.accessible.description,"Our development team prides itself on its above-and-beyond approach to accessibility and ensuring your maps and data are welcoming and attractive to all users.",1,"Our development team prides itself on its above-and-beyond approach to accessibility and ensuring your maps and data are welcoming and attractive to all users.",0
+feature.mobile.title,Mobile-friendly / Device agnostic,1,Mobile-friendly / Device agnostic,0
+feature.mobile.description,"Whether on phone, tablet, desktop computer, or projected on a wall – RAMP is an attractive and responsive solution your project needs.",1,"Whether on phone, tablet, desktop computer, or projected on a wall – RAMP is an attractive and responsive solution your project needs.",0
+feature.implement.title,Easy-to-Implement,1,Easy-to-Implement,0
+feature.implement.description,"Embed a tiny RAMP-based map into your report, host a full-screen geospatial data application, or integrate into your departmental-themed webpage. Tell a Story with multiple instances of RAMP on a single page.",1,"Embed a tiny RAMP-based map into your report, host a full-screen geospatial data application, or integrate into your departmental-themed webpage. Tell a Story with multiple instances of RAMP on a single page.",0
+feature.plugins.title,Plugins,1,Plugins,0
+feature.plugins.description,"Is RAMP missing a feature or requirement to satisfy your application or workflows? Many 3rd-party plugins already exist for you to work with.",1,"Is RAMP missing a feature or requirement to satisfy your application or workflows? Many 3rd-party plugins already exist for you to work with.",0
+explainer.main.title,"Engineered for Everyone, Ideal for You",1,"Engineered for Everyone, Ideal for You",0
+explainer.main.description,"RAMP can be configured, customized, and tailored, to meet a wide variety of business requirements and user needs.",1,"RAMP can be configured, customized, and tailored, to meet a wide variety of business requirements and user needs.",0
+explainer.main.accessible.title,Accessible,1,Accessible,0
+explainer.main.accessible.description,"Fully compliant with WCAG “AA” criteria for accessibility, and several other Treasury Board Secretariat standards and directives.",1,"Fully compliant with WCAG “AA” criteria for accessibility, and several other Treasury Board Secretariat standards and directives.",0
+explainer.main.responsive.title,Responsive,1,Responsive,0
+explainer.main.responsive.description,"RAMP-based applications work on any modern supported device and web browser.",1,"RAMP-based applications work on any modern supported device and web browser.",0
+explainer.main.plugins.title,Plugins,1,Plugins,0
+explainer.main.plugins.description,"RAMP’s modular design allows for innovation and flexibility – satisfy client requirements with specialized plugins to meet specific user needs.",1,"RAMP’s modular design allows for innovation and flexibility – satisfy client requirements with specialized plugins to meet specific user needs.",0
+explainer.main.integrate.title,Easy to Integrate,1,Easy to Integrate,0
+explainer.main.integrate.description,"RAMP can be integrated into your existing webpage’s theme, the Canada.ca template, or integrated into an application. Include multiple RAMP maps in a single page.",1,"RAMP can be integrated into your existing webpage’s theme, the Canada.ca template, or integrated into an application. Include multiple RAMP maps in a single page.",0
+explainer.main.customizable.title,Customizable,1,Customizable,0
+explainer.main.customizable.description,"A wide selection of configuration options for functionality, visual appearance, and data presentation are available with ample documentation to support your data.",1,"A wide selection of configuration options for functionality, visual appearance, and data presentation are available with ample documentation to support your data.",0
+explainer.main.openSource.title,Open Source,1,Open Source,0
+explainer.main.openSource.description,"RAMP is built on principals of collaboration, industry best practices, Government of Canada standards, and transparency. RAMP is open-source software available to anyone to use and modify.",1,"RAMP is built on principals of collaboration, industry best practices, Government of Canada standards, and transparency. RAMP is open-source software available to anyone to use and modify.",0
+multi.upcoming.title,Coming Soon in RAMP4,1,Coming Soon in RAMP4,0
+multi.upcoming.description,Features and enhancements for a new generation of web mapping applications.,1,Features and enhancements for a new generation of web mapping applications.
+multi.upcoming.interface.title,Enhanced Interface,1,Enhances Interface,0
+multi.upcoming.interface.description,"RAMP4’s redesigned user interface is feature-rich, intuitive, and responsive for all devices and resolutions.",1,"RAMP4’s redesigned user interface is feature-rich, intuitive, and responsive for all devices and resolutions.",0
+multi.upcoming.developer.title,Developer-Friendly,1,Developer-Friendly,0
+multi.upcoming.developer.description,"RAMP4 comes with a simplified core and a robust API, with ample documentation. RAMP4 is built with 3rd party developers in mind.",1,"RAMP4 comes with a simplified core and a robust API, with ample documentation. RAMP4 is built with 3rd party developers in mind.",0
+multi.upcoming.fast.title,Faster than Ever,1,Faster than Ever,0
+multi.upcoming.fast.description,"Optimization and a ground-up refactoring of RAMP makes this one of the fastest, cleanest, standards-compliant, and efficient web mapping solution around.",1,"Optimization and a ground-up refactoring of RAMP makes this one of the fastest, cleanest, standards-compliant, and efficient web mapping solution around.",0

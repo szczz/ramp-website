@@ -1,9 +1,10 @@
 module.exports = {
     mode: 'jit',
-    purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
+    purge: ['./public/**/*.html', './src/**/*.vue'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         spacing: {
+            '1/5': '20%',
             '-36': '-36px',
             '-32': '-32px',
             '-30': '-30px',
@@ -24,6 +25,7 @@ module.exports = {
             16: '16px',
             18: '18px',
             20: '20px',
+            22: '22px',
             24: '24px',
             25: '25px',
             26: '26px',
@@ -46,17 +48,42 @@ module.exports = {
             256: '256px',
             275: '275px',
             350: '350px',
+            400: '400px',
+            450: '450px',
             500: '500px'
         },
         extend: {
             colors: {
                 teal: 'rgba(241,249,255,1)',
-                'light-blue': 'rgba(188,224,253,1)'
-            }
+                'teal-dark': 'rgba(211,236,255,1)',
+                'light-blue': 'rgba(188,224,253,1)',
+                'light-blue-dark': 'rgba(159,211,253,1)',
+                orange: '#ff9f43',
+                'dark-blue': '#001a49'
+            },
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        color: '#000000',
+                        h1: {
+                            color: '#000000'
+                        },
+                        h2: {
+                            color: '#000000'
+                        },
+                        h3: {
+                            color: '#000000'
+                        },
+                        a: {
+                            color: '#000000'
+                        }
+                    }
+                }
+            })
         }
     },
     variants: {
         extend: {}
     },
-    plugins: []
+    plugins: [require('@tailwindcss/typography')]
 };
