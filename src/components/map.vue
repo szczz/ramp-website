@@ -1,10 +1,10 @@
 <template>
-    <div class="ramp-map w-full">
+    <div class="ramp-map bg-center h-[725px] flex items-center w-full">
+        <span style="flex-grow: 3.5" />
         <div
             class="
                 bg-light-blue
                 border-white border
-                absolute
                 h-450
                 w-500
                 p-40
@@ -39,6 +39,7 @@
                 {{ $t('button.requestDemo') }}
             </a>
         </div>
+        <span class="flex-grow" />
     </div>
 </template>
 
@@ -51,11 +52,6 @@ export default class RampMapV extends Vue {}
 
 <style scoped lang="scss">
 .ramp-map {
-    @apply bg-center;
-    height: 75vh;
     background-image: url('../assets/ramp-placeholder.png');
-    & div {
-        right: 16vw;
-    }
 }
 </style>

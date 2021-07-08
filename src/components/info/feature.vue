@@ -1,12 +1,12 @@
 <template>
-    <div class="section flex items-center">
+    <div class="section flex items-center h-[725px]">
         <span class="flex-grow" />
         <img
             src="../../assets/ramp-placeholder.png"
-            class="image mr-20"
+            class="w-[41%] mr-20"
             v-if="index % 2 !== 0"
         />
-        <div class="prose text" :class="{ 'text-right': index % 2 !== 0 }">
+        <div class="prose w-[25%]" :class="{ 'text-right': index % 2 !== 0 }">
             <h2>
                 {{ $t(`feature.${section.key}.title`) }}
             </h2>
@@ -29,7 +29,7 @@
         </div>
         <img
             src="../../assets/ramp-placeholder.png"
-            class="image ml-20"
+            class="w-[41%] ml-20"
             v-if="index % 2 === 0"
         />
         <span class="flex-grow" />
@@ -46,19 +46,4 @@ export default class InfoFeatureV extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-.section {
-    height: 75vh;
-    padding-left: 17vw;
-    padding-right: 17vw;
-    padding-top: 17vh;
-    padding-bottom: 17vh;
-}
-.text {
-    width: 25vw;
-}
-.image {
-    @apply h-full;
-    width: 41vw;
-}
-</style>
+<style scoped lang="scss"></style>

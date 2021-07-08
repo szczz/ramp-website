@@ -1,5 +1,5 @@
 <template>
-    <div class="glider-contain !w-[1000px] !my-[100px]">
+    <div class="glider-contain !w-[1000px] !my-[150px]">
         <div class="glider">
             <div v-for="num in [1, 2, 3, 4]" :key="num">
                 <img class="h-500" src="../../assets/ramp-placeholder.png" />

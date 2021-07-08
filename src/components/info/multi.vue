@@ -1,7 +1,7 @@
 <template>
-    <div class="section flex items-center">
+    <div class="section flex items-center p-[150px]">
         <span class="flex-grow" />
-        <div class="prose text-center max-w-none">
+        <div class="prose text-center max-w-none w-2/3">
             <h2>
                 {{ $t(`multi.${section.key}.title`) }}
             </h2>
@@ -26,7 +26,7 @@
                         src="../../assets/logo.svg"
                         class="!mb-0 inline-flex py-[40px]"
                     />
-                    <p>
+                    <p class="!mb-[32px]">
                         {{
                             $t(`multi.${section.key}.${subSection}.description`)
                         }}
@@ -48,19 +48,4 @@ export default class InfoMultiV extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-.section {
-    min-height: 75vh;
-    padding-left: 17vw;
-    padding-right: 17vw;
-    padding-top: 17vh;
-    padding-bottom: 17vh;
-}
-.text {
-    width: 25vw;
-}
-.image {
-    @apply h-full;
-    width: 41vw;
-}
-</style>
+<style scoped lang="scss"></style>
