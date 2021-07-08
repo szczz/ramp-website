@@ -10,11 +10,12 @@
             <h2>
                 {{ $t(`feature.${section.key}.title`) }}
             </h2>
-            <p>{{ $t(`feature.${section.key}.description`) }}</p>
+            <p class="!mb-36">{{ $t(`feature.${section.key}.description`) }}</p>
             <a
                 class="
                     bg-teal
-                    p-12
+                    py-12
+                    px-30
                     rounded-lg
                     border-gray-500 border
                     focus:bg-teal-dark
