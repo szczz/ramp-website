@@ -8,16 +8,23 @@
             <p>{{ $t(`multi.${section.key}.description`) }}</p>
             <div class="flex">
                 <div
-                    v-for="(subSection, index) in section.sections"
-                    :key="subSection + index"
-                    class="flex-1 mx-20"
+                    v-for="(subSection, subIndex) in section.sections"
+                    :key="subSection + subIndex"
+                    class="flex-1 mx-20 px-[20px]"
+                    :class="
+                        subIndex % 2 === 0
+                            ? 'bg-green'
+                            : index % 2 === 0
+                            ? 'bg-teal'
+                            : 'bg-white'
+                    "
                 >
                     <h3>
                         {{ $t(`multi.${section.key}.${subSection}.title`) }}
                     </h3>
                     <img
                         src="../../assets/logo.svg"
-                        class="max-h-[120px] !mb-0 inline-flex"
+                        class="!mb-0 inline-flex py-[40px]"
                     />
                     <p>
                         {{

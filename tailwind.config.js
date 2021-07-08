@@ -59,7 +59,8 @@ module.exports = {
                 'light-blue': 'rgba(188,224,253,1)',
                 'light-blue-dark': 'rgba(159,211,253,1)',
                 orange: '#ff9f43',
-                'dark-blue': '#001a49'
+                'dark-blue': '#001a49',
+                green: '#a8dea8'
             },
             typography: (theme) => ({
                 DEFAULT: {

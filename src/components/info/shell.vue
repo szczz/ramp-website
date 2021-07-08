@@ -8,6 +8,7 @@
             :index="index"
             :class="{ 'bg-teal': index % 2 !== 0 }"
         ></component>
+        <carousel></carousel>
     </div>
 </template>
 
@@ -18,12 +19,14 @@ import { layout } from '@/configs/layout';
 import InfoFeatureV from './feature.vue';
 import InfoExplainerV from './explainer.vue';
 import InfoMultiV from './multi.vue';
+import CarouselV from './carousel.vue';
 
 @Component({
     components: {
         'info-feature': InfoFeatureV,
         'info-explainer': InfoExplainerV,
-        'info-multi': InfoMultiV
+        'info-multi': InfoMultiV,
+        carousel: CarouselV
     }
 })
 export default class InfoShellV extends Vue {
