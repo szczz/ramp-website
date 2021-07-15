@@ -26,4 +26,10 @@ import RampFooterV from '@/components/footer.vue';
 export default class App extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+// overriding rv-styles
+.flex,
+.flex-grow {
+    flex: unset;
+}
+</style>

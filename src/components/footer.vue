@@ -9,10 +9,12 @@
             </a>
         </div>
         <div class="bg-dark-blue text-xl py-[40px] pl-[380px]">
-            <p><span class="font-bold">R</span>eusable</p>
-            <p><span class="font-bold">A</span>ccessible</p>
-            <p><span class="font-bold">M</span>apping</p>
-            <p><span class="font-bold">P</span>latform</p>
+            <div>
+                <p><span class="font-bold">R</span>eusable</p>
+                <p><span class="font-bold">A</span>ccessible</p>
+                <p><span class="font-bold">M</span>apping</p>
+                <p><span class="font-bold">P</span>latform</p>
+            </div>
         </div>
     </div>
 </template>
