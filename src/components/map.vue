@@ -1,37 +1,51 @@
 <template>
     <div>
+        <div
+            class="
+                shadow-inset-bottom
+                min-h-[20px]
+                absolute
+                mt-[705px]
+                w-full
+                z-10
+                pointer-events-none
+            "
+        ></div>
         <div id="ramp-map" is="rv-map" class="h-[725px]" v-pre></div>
         <div class="flex absolute top-[190px] w-full pointer-events-none">
             <span style="flex-grow: 3.5" />
             <div
                 class="
-                    bg-light-blue
-                    border-white border
+                    backdrop-blur
+                    bg-black-transparent
                     h-[450px]
-                    w-[500px]
+                    w-[700px]
                     p-[40px]
                     prose
-                    text-center
+                    lg:prose-lg
+                    prose-white
+                    text-right
                     flex-col flex
-                    items-center
+                    items-end
                     justify-center
+                    max-w-none
                     pointer-events-auto
                 "
             >
-                <h1>{{ $t('map.title') }}</h1>
+                <h2 class="">{{ $t('map.title') }}</h2>
 
-                <p class="!mt-[0px]">
+                <p class="!mt-[0px] max-w-[470px]">
                     {{ $t('map.description') }}
                 </p>
                 <a
                     class="
-                        border-gray-500
+                        border-white
                         rounded-lg
                         p-[12px]
                         border-2
                         font-bold
-                        focus:bg-light-blue-dark
-                        hover:bg-light-blue-dark
+                        focus:bg-gray-600
+                        hover:bg-gray-600
                         !no-underline
                         text-xl
                     "

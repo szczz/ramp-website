@@ -1,20 +1,31 @@
 <template>
     <div class="text-white">
-        <div class="text-center p-[150px] flex justify-center bg-orange">
+        <div class="text-center p-[75px] flex justify-center bg-light-blue">
             <a
-                class="p-[30px] text-4xl bg-dark-blue rounded-2xl"
+                class="px-[30px] py-[20px] text-2xl bg-dark-blue rounded-2xl"
                 href="mailto:dan.bowerman@ec.gc.ca?subject=Request%20for%20a%20RAMP%20demo&body=Describe%20your%20business requirements%20to%20the%20RAMP%20development%20team.%20Someone%20will%20reach%20out%20to%20you%20soon%20to%20schedule%20a%20demonstration%20and%20discuss%20your%20needs!"
             >
                 {{ $t('button.requestDemo') }}
             </a>
         </div>
-        <div class="bg-dark-blue text-xl py-[40px] pl-[380px]">
-            <div>
-                <p><span class="font-bold">R</span>eusable</p>
-                <p><span class="font-bold">A</span>ccessible</p>
-                <p><span class="font-bold">M</span>apping</p>
-                <p><span class="font-bold">P</span>latform</p>
-            </div>
+        <div class="flex text-xl py-[40px] bg-gray-600">
+            <span class="flex-grow max-w-[205px] min-w-[10px]" />
+            <a href="" class="flex w-max">
+                <img
+                    src="../assets/logo-no-text.svg"
+                    class="w-[100px] h-[100px]"
+                />
+                <div class="flex flex-col justify-center">
+                    <h1 class="text-4xl font-bold">RAMP</h1>
+                    <span class="text-xl"
+                        >Reusable Accessible Mapping Platform</span
+                    >
+                </div>
+            </a>
+            <a href="" class="ml-auto self-center text-2xl">
+                {{ $t('header.github') }}
+            </a>
+            <span class="flex-grow max-w-[205px]" />
         </div>
     </div>
 </template>

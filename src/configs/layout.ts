@@ -1,6 +1,8 @@
 const FEATURE = 'feature';
+const FEATURE_COLLECTION = 'feature-collection';
 const EXPLAINER = 'explainer';
 const MULTI = 'multi';
+const CAROUSEL = 'carousel';
 
 export const layout = [
     {
@@ -10,10 +12,6 @@ export const layout = [
     {
         type: FEATURE,
         key: 'dataAnalysis'
-    },
-    {
-        type: FEATURE,
-        key: 'dataExtraction'
     },
     {
         type: FEATURE,
@@ -28,12 +26,8 @@ export const layout = [
         key: 'mobile'
     },
     {
-        type: FEATURE,
-        key: 'implement'
-    },
-    {
-        type: FEATURE,
-        key: 'plugins'
+        type: FEATURE_COLLECTION,
+        keys: ['implement', 'dataExtraction', 'plugins']
     },
     {
         type: EXPLAINER,
@@ -42,6 +36,9 @@ export const layout = [
             ['accessible', 'responsive', 'plugins'],
             ['integrate', 'customizable', 'openSource']
         ]
+    },
+    {
+        type: CAROUSEL
     },
     {
         type: MULTI,

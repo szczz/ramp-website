@@ -1,16 +1,31 @@
 <template>
-    <div class="glider-contain !w-[1000px] !my-[150px]">
-        <div class="glider">
-            <div v-for="num in [1, 2, 3, 4]" :key="num">
-                <img
-                    class="h-[500px]"
-                    src="../../assets/ramp-placeholder.png"
-                />
-            </div>
+    <div class="section py-[150px]">
+        <div class="prose lg:prose-lg flex max-w-none justify-center mb-[50px]">
+            <h2>Portfolio</h2>
         </div>
-        <!--button aria-label="Previous" class="glider-prev">«</button-->
-        <!--button aria-label="Next" class="glider-next">»</button-->
-        <div role="tablist" class="dots"></div>
+        <div class="glider-contain !w-[1000px]">
+            <div class="glider">
+                <div v-for="num in [1, 2, 3, 4]" :key="num">
+                    <img
+                        class="h-[500px]"
+                        src="../../assets/ramp-placeholder.png"
+                    />
+                    <div class="prose lg:prose-lg max-w-none my-[20px]">
+                        <h3>Site Name</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Molestiae qui reiciendis a atque esse nobis,
+                            at assumenda tempora amet nesciunt delectus
+                            doloribus pariatur vitae dolores unde necessitatibus
+                            est iure officiis!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--button aria-label="Previous" class="glider-prev">«</button-->
+            <!--button aria-label="Next" class="glider-next">»</button-->
+            <div role="tablist" class="dots"></div>
+        </div>
     </div>
 </template>
 

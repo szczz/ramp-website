@@ -6,7 +6,10 @@
             class="w-[41%] mr-[20px]"
             v-if="index % 2 !== 0"
         />
-        <div class="prose w-[25%]" :class="{ 'text-right': index % 2 !== 0 }">
+        <div
+            class="prose lg:prose-lg w-[25%]"
+            :class="{ 'text-right': index % 2 !== 0 }"
+        >
             <h2>
                 {{ $t(`feature.${section.key}.title`) }}
             </h2>

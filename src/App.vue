@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="bg-white">
         <ramp-header></ramp-header>
         <ramp-map></ramp-map>
         <info-shell></info-shell>

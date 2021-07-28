@@ -1,7 +1,7 @@
 <template>
     <div class="section flex items-center p-[150px]">
         <span class="flex-grow" />
-        <div class="prose text-center max-w-none w-2/3">
+        <div class="prose lg:prose-lg text-center max-w-none w-2/3">
             <h2>
                 {{ $t(`explainer.${section.key}.title`) }}
             </h2>
