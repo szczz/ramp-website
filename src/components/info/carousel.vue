@@ -1,7 +1,7 @@
 <template>
     <div class="section py-[150px]">
         <div class="flex max-w-none justify-center mb-[50px]">
-            <h2 class="!mt-0">Portfolio</h2>
+            <h2 class="!mt-0">{{ $t('carousel.title') }}</h2>
         </div>
         <div class="glider-contain !w-[80%] md:!w-2/3">
             <div class="glider">
