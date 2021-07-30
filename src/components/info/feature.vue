@@ -1,13 +1,22 @@
 <template>
-    <div class="section flex items-center h-[725px]">
-        <span class="flex-grow" />
+    <div
+        class="
+            section
+            flex
+            items-center
+            justify-center
+            content-center
+            py-[150px]
+        "
+        :class="index % 2 === 0 ? 'flex-wrap-reverse' : 'flex-wrap'"
+    >
         <img
             src="../../assets/ramp-placeholder.png"
-            class="w-[41%] mr-[20px]"
+            class="w-[780px] max-w-[80%] mr-[20px]"
             v-if="index % 2 !== 0"
         />
         <div
-            class="prose lg:prose-lg w-[25%]"
+            class="w-[475px] max-w-[80%]"
             :class="{ 'text-right': index % 2 !== 0 }"
         >
             <h2>
@@ -26,6 +35,7 @@
                     focus:bg-teal-dark
                     hover:bg-teal-dark
                     !no-underline
+                    whitespace-nowrap
                 "
                 href=""
             >
@@ -34,10 +44,9 @@
         </div>
         <img
             src="../../assets/ramp-placeholder.png"
-            class="w-[41%] ml-[20px]"
+            class="w-[780px] max-w-[80%] ml-[20px]"
             v-if="index % 2 === 0"
         />
-        <span class="flex-grow" />
     </div>
 </template>
 

@@ -1,7 +1,6 @@
 <template>
-    <div class="section flex items-center h-[725px] p-[150px]">
-        <span class="flex-grow" />
-        <div class="prose lg:prose-lg max-w-none w-2/3 flex flex-col">
+    <div class="section flex items-center justify-center py-[150px]">
+        <div class="max-w-none w-[80%] md:w-2/3 flex flex-col">
             <div class="flex gap-[80px]">
                 <h2
                     v-for="(key, index) in section.keys"
@@ -36,6 +35,7 @@
                             focus:bg-teal-dark
                             hover:bg-teal-dark
                             !no-underline
+                            whitespace-nowrap
                         "
                         href=""
                     >
@@ -44,7 +44,6 @@
                 </div>
             </div>
         </div>
-        <span class="flex-grow" />
     </div>
 </template>
 

@@ -1,16 +1,16 @@
 <template>
     <div class="section py-[150px]">
-        <div class="prose lg:prose-lg flex max-w-none justify-center mb-[50px]">
-            <h2>Portfolio</h2>
+        <div class="flex max-w-none justify-center mb-[50px]">
+            <h2 class="!mt-0">Portfolio</h2>
         </div>
-        <div class="glider-contain !w-[1000px]">
+        <div class="glider-contain !w-[80%] md:!w-2/3">
             <div class="glider">
                 <div v-for="num in [1, 2, 3, 4]" :key="num">
                     <img
-                        class="h-[500px]"
+                        class="w-full"
                         src="../../assets/ramp-placeholder.png"
                     />
-                    <div class="prose lg:prose-lg max-w-none my-[20px]">
+                    <div class="max-w-none my-[20px]">
                         <h3>Site Name</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur, adipisicing

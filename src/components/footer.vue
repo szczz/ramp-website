@@ -8,21 +8,23 @@
                 {{ $t('button.requestDemo') }}
             </a>
         </div>
-        <div class="flex text-xl py-[40px] bg-gray-600">
+        <div class="flex text-xl py-[20px] bg-gray-600">
             <span class="flex-grow max-w-[205px] min-w-[10px]" />
             <a href="" class="flex w-max">
                 <img
                     src="../assets/logo-no-text.svg"
-                    class="w-[100px] h-[100px]"
+                    class="w-[100px] h-[100px] !m-0"
                 />
                 <div class="flex flex-col justify-center">
-                    <h1 class="text-4xl font-bold">RAMP</h1>
-                    <span class="text-xl"
-                        >Reusable Accessible Mapping Platform</span
-                    >
+                    <h1 class="!my-0 !font-semibold ml-[-3px] !text-4xl">
+                        RAMP
+                    </h1>
+                    <p class="!text-white text-xl !my-0">
+                        Reusable Accessible Mapping Platform
+                    </p>
                 </div>
             </a>
-            <a href="" class="ml-auto self-center text-2xl">
+            <a href="" class="!text-white ml-auto self-center text-2xl">
                 {{ $t('header.github') }}
             </a>
             <span class="flex-grow max-w-[205px]" />

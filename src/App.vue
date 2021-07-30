@@ -32,4 +32,8 @@ export default class App extends Vue {}
 .flex-grow {
     flex: unset;
 }
+
+a {
+    @apply no-underline #{!important};
+}
 </style>

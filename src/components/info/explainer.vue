@@ -1,8 +1,7 @@
 <template>
-    <div class="section flex items-center p-[150px]">
-        <span class="flex-grow" />
-        <div class="prose lg:prose-lg text-center max-w-none w-2/3">
-            <h2>
+    <div class="section flex items-center justify-center py-[150px]">
+        <div class="text-center max-w-none w-[80%] md:w-2/3">
+            <h2 class="!mt-0">
                 {{ $t(`explainer.${section.key}.title`) }}
             </h2>
             <p>{{ $t(`explainer.${section.key}.description`) }}</p>
@@ -19,7 +18,7 @@
                     >
                         <img
                             :src="`./img/${subSection}.svg`"
-                            class="max-h-[120px] !mb-0 inline-flex"
+                            class="h-[120px] !mb-0 inline-flex"
                         />
                         <h3>
                             {{
@@ -39,7 +38,6 @@
                 </div>
             </div>
         </div>
-        <span class="flex-grow" />
     </div>
 </template>
 

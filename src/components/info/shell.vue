@@ -1,5 +1,5 @@
 <template>
-    <div id="features">
+    <div id="features" class="prose prose-sm md:prose lg:prose-lg !max-w-none">
         <component
             :is="mapping[section.type]"
             v-for="(section, index) in features"
