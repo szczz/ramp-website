@@ -12,8 +12,17 @@
             "
         ></div>
         <div id="ramp-map" is="rv-map" class="h-[725px]" v-pre></div>
-        <div class="flex justify-center w-full absolute top-[190px]">
-            <div class="flex justify-end pointer-events-none w-[80%] md:w-2/3">
+        <div
+            class="
+                flex
+                justify-center
+                w-full
+                absolute
+                top-[190px]
+                pointer-events-none
+            "
+        >
+            <div class="flex justify-end w-[80%] md:w-2/3">
                 <div
                     class="
                         backdrop-blur

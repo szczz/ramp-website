@@ -8,10 +8,10 @@
                 />
                 <div class="flex flex-col justify-center">
                     <h1 class="!my-0 !font-semibold ml-[-3px] !text-4xl">
-                        RAMP
+                        {{ $t('header.title') }}
                     </h1>
                     <p class="text-xl !my-0">
-                        Reusable Accessible Mapping Platform
+                        {{ $t('header.subtitle') }}
                     </p>
                 </div>
             </a>

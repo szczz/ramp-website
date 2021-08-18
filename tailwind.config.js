@@ -12,6 +12,7 @@ module.exports = {
                 teal: 'rgba(241,249,255,1)',
                 'teal-dark': 'rgba(211,236,255,1)',
                 'light-blue': 'rgba(188,224,253,1)',
+                'light-blue-transparent': 'rgba(188,224,253,0.7)',
                 'light-blue-dark': 'rgba(159,211,253,1)',
                 orange: '#ff9f43',
                 'dark-blue': '#001a49',
