@@ -25,7 +25,7 @@
             <p class="!mb-[36px]">
                 {{ $t(`feature.${section.key}.description`) }}
             </p>
-            <a
+            <router-link
                 class="
                     bg-teal
                     py-[12px]
@@ -37,10 +37,10 @@
                     !no-underline
                     whitespace-nowrap
                 "
-                href=""
+                to="/samples/CONFIG_GOES_HERE"
             >
                 {{ $t('button.viewDemo') }}
-            </a>
+            </router-link>
         </div>
         <img
             src="../../assets/ramp-placeholder.png"
