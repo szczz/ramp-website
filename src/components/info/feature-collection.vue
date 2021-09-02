@@ -25,7 +25,7 @@
                     :key="key + index + '_button'"
                     class="flex-1"
                 >
-                    <a
+                    <router-link
                         class="
                             bg-teal
                             py-[12px]
@@ -37,10 +37,10 @@
                             !no-underline
                             whitespace-nowrap
                         "
-                        href=""
+                        to="/samples/CONFIG_GOES_HERE"
                     >
                         {{ $t('button.viewDemo') }}
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
