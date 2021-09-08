@@ -37,7 +37,11 @@
                             !no-underline
                             whitespace-nowrap
                         "
-                        to="/samples/CONFIG_GOES_HERE"
+                        :to="
+                            (index === 0 ? `/external_samples/` : `/samples/`) +
+                            `${section.config[index]}`
+                        "
+                        target="_blank"
                     >
                         {{ $t('button.viewDemo') }}
                     </router-link>

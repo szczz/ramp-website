@@ -11,7 +11,7 @@
         :class="index % 2 === 0 ? 'flex-wrap-reverse' : 'flex-wrap'"
     >
         <img
-            src="../../assets/ramp-placeholder.png"
+            :src="`./img/${section.index}.png`"
             class="w-[780px] max-w-[80%] mr-[20px]"
             v-if="index % 2 !== 0"
         />
@@ -37,13 +37,14 @@
                     !no-underline
                     whitespace-nowrap
                 "
-                to="/samples/CONFIG_GOES_HERE"
+                :to="`/samples/${section.config}`"
+                target="_blank"
             >
                 {{ $t('button.viewDemo') }}
             </router-link>
         </div>
         <img
-            src="../../assets/ramp-placeholder.png"
+            :src="`./img/${section.index}.png`"
             class="w-[780px] max-w-[80%] ml-[20px]"
             v-if="index % 2 === 0"
         />
