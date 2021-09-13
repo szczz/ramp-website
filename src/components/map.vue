@@ -148,29 +148,31 @@ export default class RampMapV extends Vue {
         }
 
         window.scrollTo(0, 0);
-        RAMP.mapAdded.subscribe(async (mapi: any) => {
-            const scrollguardComponent = new Vue({
-                render: (h) =>
-                    h('map-scrollguard', {
-                        props: { _mapi: mapi }
-                    }),
-                components: {
-                    //eslint-disable-next-line
-                    'map-scrollguard': MapScrollguard
-                },
-                i18n: this.$i18n
-            }).$mount();
+        if (this.$route.name === 'Home') {
+            RAMP.mapAdded.subscribe(async (mapi: any) => {
+                const scrollguardComponent = new Vue({
+                    render: (h) =>
+                        h('map-scrollguard', {
+                            props: { _mapi: mapi }
+                        }),
+                    components: {
+                        //eslint-disable-next-line
+                        'map-scrollguard': MapScrollguard
+                    },
+                    i18n: this.$i18n
+                }).$mount();
 
-            const innerShell = this.$el.querySelector('.rv-inner-shell')!;
+                const innerShell = this.$el.querySelector('.rv-inner-shell')!;
 
-            // insert the scrollguard as the first child of the inner shell
-            // this will place the guard above the map, but below all other RAMP controls
-            // when the guard is active, it grays out the map, but not the controls
-            innerShell.insertBefore(
-                scrollguardComponent.$el,
-                innerShell.firstChild
-            );
-        });
+                // insert the scrollguard as the first child of the inner shell
+                // this will place the guard above the map, but below all other RAMP controls
+                // when the guard is active, it grays out the map, but not the controls
+                innerShell.insertBefore(
+                    scrollguardComponent.$el,
+                    innerShell.firstChild
+                );
+            });
+        }
     }
 }
 </script>
