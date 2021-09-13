@@ -9,6 +9,7 @@ header.github,GitHub,1,GitHub,0
 header.getInTouch,Get in Touch,1,Get in Touch,0
 map.title,"An attractive, feature-rich, standards-compliant mapping interface for accessing and displaying your geospatial data.",1,"An attractive, feature-rich, standards-compliant mapping interface for accessing and displaying your geospatial data.",0
 map.description,"Developed in-house at Environment and Climate Change Canada, RAMP has been the web GIS visualization solution for Canadians and Federal departments for over 10 years.",1,"Developed in-house at Environment and Climate Change Canada, RAMP has been the web GIS visualization solution for Canadians and Federal departments for over 10 years.",0
+map.scrollguard,Use ctrl + scroll to zoom the map,1,Utilisez les touches Ctrl et + pour faire un zoom de la carte,1
 feature.displayData.title,Display Multiple Types of Data,1,Display Multiple Types of Data,0
 feature.displayData.description,"RAMP supports popular geospatial datatypes, via web services or static files you can upload. RAMP can ingest Esri™ Feature/Map services, OGC WMS, WFS, GeoJSON, CSV, and many more.",1,"RAMP supports popular geospatial datatypes, via web services or static files you can upload. RAMP can ingest Esri™ Feature/Map services, OGC WMS, WFS, GeoJSON, CSV, and many more.",0
 feature.dataAnalysis.title,Data Mashups & Analysis,1,Data Mashups & Analysis,0

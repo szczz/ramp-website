@@ -64,12 +64,15 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+import MapScrollguard from './map-scrollguard.vue';
+
 @Component
 export default class RampMapV extends Vue {
     @Prop() config: string | undefined;
 
     mounted() {
         const RAMP = (window as any).RAMP;
+        const _window = window as any;
 
         // if RAMP API is not ready yet, loop-wait until it's loaded
         if (!RAMP) {
@@ -82,10 +85,10 @@ export default class RampMapV extends Vue {
             `./config/${this.config ? this.config : 'sample_0'}.json`
         );
 
-        window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
+        _window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
             display: 'flex'
         });
-        window.$('.text-white').css({
+        _window.$('.text-white').css({
             display: 'block'
         });
 
@@ -99,23 +102,23 @@ export default class RampMapV extends Vue {
                 `./config/sample_mobile_small.json`
             );
 
-            window.$('#medium-text').css({
+            _window.$('#medium-text').css({
                 display: 'block',
                 'margin-top': '2%'
             });
-            window.$('#text1').css({
+            _window.$('#text1').css({
                 float: 'left',
                 width: '15%',
                 'margin-right': '2%',
                 'margin-left': '2%'
             });
-            window.$('#text2').css({
+            _window.$('#text2').css({
                 float: 'right',
                 width: '15%',
                 'margin-left': '2%',
                 'margin-right': '2%'
             });
-            window.$('#ramp-map2').css({
+            _window.$('#ramp-map2').css({
                 display: 'block',
                 height: '625px',
                 width: '50%',
@@ -123,7 +126,7 @@ export default class RampMapV extends Vue {
                 'margin-bottom': '2%',
                 'margin-left': '25%'
             });
-            window.$('#ramp-map3').css({
+            _window.$('#ramp-map3').css({
                 display: 'block',
                 height: '725px',
                 width: '20%',
@@ -132,19 +135,44 @@ export default class RampMapV extends Vue {
                 'margin-left': '40%'
             });
         } else if (this.config === 'sample_implement') {
-            window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
+            _window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
                 display: 'none'
             });
-            window.$('.text-white').css({
+            _window.$('.text-white').css({
                 display: 'none'
             });
-            window.$('#ramp-map').css({
+            _window.$('#ramp-map').css({
                 width: '50%',
                 'margin-left': '25%'
             });
         }
 
         window.scrollTo(0, 0);
+        if (this.$route.name === 'Home') {
+            RAMP.mapAdded.subscribe(async (mapi: any) => {
+                const scrollguardComponent = new Vue({
+                    render: (h) =>
+                        h('map-scrollguard', {
+                            props: { _mapi: mapi }
+                        }),
+                    components: {
+                        //eslint-disable-next-line
+                        'map-scrollguard': MapScrollguard
+                    },
+                    i18n: this.$i18n
+                }).$mount();
+
+                const innerShell = this.$el.querySelector('.rv-inner-shell')!;
+
+                // insert the scrollguard as the first child of the inner shell
+                // this will place the guard above the map, but below all other RAMP controls
+                // when the guard is active, it grays out the map, but not the controls
+                innerShell.insertBefore(
+                    scrollguardComponent.$el,
+                    innerShell.firstChild
+                );
+            });
+        }
     }
 }
 </script>
