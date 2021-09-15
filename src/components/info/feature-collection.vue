@@ -1,5 +1,7 @@
 <template>
-    <div class="section flex items-center justify-center py-[150px]">
+    <div
+        class="section flex items-center justify-center text-center py-[150px]"
+    >
         <div class="max-w-none w-[80%] md:w-2/3 flex flex-col">
             <div class="flex gap-[80px]">
                 <h2

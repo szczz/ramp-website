@@ -8,16 +8,33 @@
                 <div v-for="num in [1, 2, 3, 4]" :key="num">
                     <img
                         class="w-full"
-                        src="../../assets/ramp-placeholder.png"
+                        :src="`./img/carousel-${section.index[num - 1]}.png`"
                     />
                     <div class="max-w-none my-[20px]">
-                        <h3>Site Name</h3>
+                        <h3>
+                            <a
+                                :href="
+                                    $t(`carousel.${section.keys[num - 1]}.link`)
+                                "
+                                target="_blank"
+                            >
+                                {{
+                                    $t(
+                                        `carousel.${
+                                            section.keys[num - 1]
+                                        }.title`
+                                    )
+                                }}
+                            </a>
+                        </h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Molestiae qui reiciendis a atque esse nobis,
-                            at assumenda tempora amet nesciunt delectus
-                            doloribus pariatur vitae dolores unde necessitatibus
-                            est iure officiis!
+                            {{
+                                $t(
+                                    `carousel.${
+                                        section.keys[num - 1]
+                                    }.description`
+                                )
+                            }}
                         </p>
                     </div>
                 </div>
@@ -64,6 +81,13 @@ export default class CarouselV extends Vue {
     }
     &.active {
         @apply saturate-200 border-2 #{!important};
+    }
+}
+
+.glider-slide {
+    a {
+        color: #0000ff !important;
+        text-decoration: underline !important;
     }
 }
 </style>
