@@ -77,10 +77,12 @@ export default {
 </script>
 
 <style lang="scss">
-rv-appbar {
-    @apply hidden #{!important};
-}
-.rv-content-pane {
-    @apply hidden #{!important};
+.home {
+    rv-appbar {
+        @apply hidden #{!important};
+    }
+    .rv-content-pane {
+        @apply hidden #{!important};
+    }
 }
 </style>
