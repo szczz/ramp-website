@@ -7,7 +7,7 @@
             <p>{{ $t(`explainer.${section.key}.description`) }}</p>
             <div class="flex flex-col">
                 <div
-                    class="flex"
+                    class="md:flex"
                     v-for="(row, index) in section.sections"
                     :key="index"
                 >

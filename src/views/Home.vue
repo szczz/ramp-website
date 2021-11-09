@@ -6,18 +6,21 @@
                     flex
                     justify-center
                     w-full
+                    container
+                    mx-auto
                     absolute
                     top-[190px]
                     pointer-events-none
                 "
             >
-                <div class="flex justify-end w-[80%] md:w-2/3">
+                <div class="flex justify-end w-full md:w-2/3">
                     <div
                         class="
                             backdrop-blur
                             bg-black-transparent
                             h-[450px]
-                            w-[700px]
+                            w-full
+                            md:w-[700px]
                             p-[40px]
                             !text-white
                             text-right

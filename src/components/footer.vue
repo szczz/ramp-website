@@ -27,7 +27,16 @@
             </div>
         </div>
         <div class="flex text-xl py-[20px] bg-gray-600 justify-center">
-            <div class="flex justify-center items-center w-[80%] md:w-2/3">
+            <div
+                class="
+                    flex flex-wrap
+                    sm:flex-nowrap
+                    justify-center
+                    items-center
+                    w-[80%]
+                    md:w-2/3
+                "
+            >
                 <a href="" class="flex w-max">
                     <img
                         src="../assets/logo-no-text.svg"
@@ -44,7 +53,7 @@
                 </a>
                 <a
                     href="https://github.com/fgpv-vpgf"
-                    class="!text-white ml-auto self-center text-2xl"
+                    class="!text-white sm:ml-auto self-center text-2xl"
                 >
                     {{ $t('header.github') }}
                 </a>

@@ -1,32 +1,18 @@
 <template>
-    <div
-        class="section flex items-center justify-center text-center py-[150px]"
-    >
-        <div class="max-w-none w-[80%] md:w-2/3 flex flex-col">
-            <div class="flex gap-[80px]">
-                <h2
-                    v-for="(key, index) in section.keys"
-                    :key="key + index + '_header'"
-                    class="flex-1 !mt-0"
-                >
-                    {{ $t(`feature.${key}.title`) }}
-                </h2>
-            </div>
-            <div class="flex gap-[80px]">
-                <p
-                    class="!mb-[36px] flex-1"
-                    v-for="(key, index) in section.keys"
-                    :key="key + index + '_main'"
-                >
-                    {{ $t(`feature.${key}.description`) }}
-                </p>
-            </div>
-            <div class="flex gap-[80px]">
+    <div class="section py-[150px]">
+        <div class="container mx-auto">
+            <div class="text-center md:flex mx-auto gap-[80px] w-[80%]">
                 <div
+                    class="flex-1 mb-[60px] md:mb-auto"
                     v-for="(key, index) in section.keys"
-                    :key="key + index + '_button'"
-                    class="flex-1"
+                    :key="key + index"
                 >
+                    <h2 class="!mt-0 md:h-[60px] lg:h-[80px] xl:h-[60px]">
+                        {{ $t(`feature.${key}.title`) }}
+                    </h2>
+                    <p class="!mb-[36px]">
+                        {{ $t(`feature.${key}.description`) }}
+                    </p>
                     <router-link
                         class="
                             bg-teal

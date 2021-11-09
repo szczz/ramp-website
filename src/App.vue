@@ -32,6 +32,10 @@ export default class App extends Vue {}
     flex: unset;
 }
 
+.container {
+    @apply mx-[10%];
+}
+
 a {
     @apply no-underline #{!important};
 }
