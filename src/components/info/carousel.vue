@@ -3,45 +3,53 @@
         <div class="flex max-w-none justify-center mb-[50px]">
             <h2 class="!mt-0">{{ $t('carousel.title') }}</h2>
         </div>
-        <div class="glider-contain !w-[80%] md:!w-2/3">
-            <div class="glider">
-                <div v-for="num in [1, 2, 3, 4]" :key="num">
-                    <img
-                        class="w-full"
-                        :src="`./img/carousel-${section.index[num - 1]}.png`"
-                    />
-                    <div class="max-w-none my-[20px]">
-                        <h3>
-                            <a
-                                :href="
-                                    $t(`carousel.${section.keys[num - 1]}.link`)
-                                "
-                                target="_blank"
-                            >
+        <div class="container mx-auto">
+            <div class="glider-contain !w-[80%] !max-w-[800px]">
+                <div class="glider">
+                    <div v-for="num in [1, 2, 3, 4]" :key="num">
+                        <img
+                            class="w-full"
+                            :src="`./img/carousel-${
+                                section.index[num - 1]
+                            }.png`"
+                        />
+                        <div class="max-w-none my-[20px]">
+                            <h3>
+                                <a
+                                    :href="
+                                        $t(
+                                            `carousel.${
+                                                section.keys[num - 1]
+                                            }.link`
+                                        )
+                                    "
+                                    target="_blank"
+                                >
+                                    {{
+                                        $t(
+                                            `carousel.${
+                                                section.keys[num - 1]
+                                            }.title`
+                                        )
+                                    }}
+                                </a>
+                            </h3>
+                            <p>
                                 {{
                                     $t(
                                         `carousel.${
                                             section.keys[num - 1]
-                                        }.title`
+                                        }.description`
                                     )
                                 }}
-                            </a>
-                        </h3>
-                        <p>
-                            {{
-                                $t(
-                                    `carousel.${
-                                        section.keys[num - 1]
-                                    }.description`
-                                )
-                            }}
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <!--button aria-label="Previous" class="glider-prev">«</button-->
+                <!--button aria-label="Next" class="glider-next">»</button-->
+                <div role="tablist" class="dots"></div>
             </div>
-            <!--button aria-label="Previous" class="glider-prev">«</button-->
-            <!--button aria-label="Next" class="glider-next">»</button-->
-            <div role="tablist" class="dots"></div>
         </div>
     </div>
 </template>
@@ -61,7 +69,7 @@ export default class CarouselV extends Vue {
         new Glider(this.$el.querySelector('.glider'), {
             slidesToShow: 1,
             scrollLock: true,
-            scrollLockDelay: 50,
+            scrollLockDelay: 0,
             dots: '.dots',
             draggable: true
             /* arrows: {
@@ -82,6 +90,10 @@ export default class CarouselV extends Vue {
     &.active {
         @apply saturate-200 border-2 #{!important};
     }
+}
+
+.glider {
+    overflow-x: hidden;
 }
 
 .glider-slide {
