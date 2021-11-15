@@ -33,7 +33,7 @@ module.exports = {
                             color: '#000000'
                         },
                         a: {
-                            color: '#000000'
+                            //color: '#000000'
                         }
                     }
                 },
