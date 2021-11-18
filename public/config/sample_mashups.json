@@ -52,7 +52,7 @@
         "initialBasemapId": "baseNrCan",
         "components": {
             "geoSearch": {
-                "enabled": false,
+                "enabled": true,
                 "showGraphic": true,
                 "showInfo": true
             },

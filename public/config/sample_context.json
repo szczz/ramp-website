@@ -13,7 +13,7 @@
             "folderName": "default"
         },
         "legend": {
-            "allowImport": false,
+            "allowImport": true,
             "isOpen": {
                 "large": false,
                 "medium": false,
@@ -52,7 +52,7 @@
         "initialBasemapId": "baseNrCan",
         "components": {
             "geoSearch": {
-                "enabled": false,
+                "enabled": true,
                 "showGraphic": true,
                 "showInfo": true
             },
@@ -91,7 +91,7 @@
         "layers": [
             {
                 "id": "oilsandsdata",
-                "name": "Oil Sands Data",
+                "name": "Oil Sands Monitoring Stations",
                 "layerType": "esriDynamic",
                 "layerEntries": [
                     {
