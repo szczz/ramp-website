@@ -13,7 +13,7 @@
             "folderName": "default"
         },
         "legend": {
-            "allowImport": false,
+            "allowImport": true,
             "isOpen": {
                 "large": true,
                 "medium": true,
