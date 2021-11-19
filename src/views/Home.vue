@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <ramp-map
+        <ramp-map :shadow="true"
             ><div
                 class="
                     flex
@@ -53,7 +53,11 @@
                                 !no-underline
                                 text-xl
                             "
-                            href="mailto:applicationsdecartographieweb-webmappingapplications@ec.gc.ca?subject=Request%20for%20a%20RAMP%20demo&body=Describe%20your%20business requirements%20to%20the%20RAMP%20development%20team.%20Someone%20will%20reach%20out%20to%20you%20soon%20to%20schedule%20a%20demonstration%20and%20discuss%20your%20needs!"
+                            :href="`mailto:${
+                                links[$i18n.locale].email
+                            }?subject=${$t('email.subject')}&body=${$t(
+                                'email.body'
+                            )}`"
                         >
                             {{ $t('button.requestDemo') }}
                         </a>
@@ -69,12 +73,18 @@
 // @ is an alias to /src
 import RampMapV from '@/components/map.vue';
 import InfoShellV from '@/components/info/shell.vue';
+import { links } from '@/configs/links';
 
 export default {
     name: 'Home',
     components: {
         'ramp-map': RampMapV,
         'info-shell': InfoShellV
+    },
+    data: function () {
+        return {
+            links: links
+        };
     }
 };
 </script>

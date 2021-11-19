@@ -10,6 +10,7 @@
                 z-10
                 pointer-events-none
             "
+            v-if="shadow"
         ></div>
         <div
             id="ramp-map"
@@ -69,6 +70,7 @@ import MapScrollguard from './map-scrollguard.vue';
 @Component
 export default class RampMapV extends Vue {
     @Prop() config: string | undefined;
+    @Prop() shadow: boolean = false;
 
     mounted() {
         const RAMP = (window as any).RAMP;
@@ -82,7 +84,7 @@ export default class RampMapV extends Vue {
 
         new RAMP.Map(
             this.$el.querySelector('#ramp-map'),
-            `./config/${this.config ? this.config : 'sample_0'}.json`
+            `./config/${this.config ? this.config : '0'}.json`
         );
 
         _window.$('.flex.relative.z-10.shadow-lg.justify-center').css({

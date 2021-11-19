@@ -7,38 +7,32 @@ const CAROUSEL = 'carousel';
 export const layout = [
     {
         type: FEATURE,
-        key: 'displayData',
-        config: 'sample_datatypes',
+        key: 'datatypes',
         index: '0'
     },
     {
         type: FEATURE,
-        key: 'dataAnalysis',
-        config: 'sample_mashups',
+        key: 'mashups',
         index: '1'
     },
     {
         type: FEATURE,
         key: 'context',
-        config: 'sample_context',
         index: '2'
     },
     {
         type: FEATURE,
-        key: 'accessible',
-        config: 'sample_accessibility',
+        key: 'accessibility',
         index: '3'
     },
     {
         type: FEATURE,
         key: 'mobile',
-        config: 'sample_mobile',
         index: '4'
     },
     {
         type: FEATURE_COLLECTION,
-        keys: ['implement', 'dataExtraction', 'plugins'],
-        config: ['sample_implement', 'sample_clipnship', 'sample_plugins']
+        keys: ['implement', 'clipnship', 'plugins']
     },
     {
         type: EXPLAINER,
