@@ -47,7 +47,7 @@
                         src="../assets/logo-no-text.svg"
                         class="w-[100px] h-[100px] !m-0"
                     />
-                    <div class="flex flex-col justify-center text-white">
+                    <div class="!flex flex-col justify-center text-white">
                         <h1
                             class="
                                 !my-0
