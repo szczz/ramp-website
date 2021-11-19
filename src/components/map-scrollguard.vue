@@ -89,8 +89,8 @@ export default class MapScrollguard extends Vue {
         color: white;
         position: relative;
         margin: 0;
-        top: 50% !important;
-        left: 25%;
+        top: 85% !important;
+        left: 50%;
         transform: translate(-50%, -50%);
     }
 }
