@@ -16,11 +16,15 @@
                     class="
                         px-[30px]
                         py-[20px]
-                        text-2xl
+                        !text-[24px]
+                        !leading-[32px]
                         bg-dark-blue
                         rounded-2xl
+                        text-white
                     "
-                    href="mailto:applicationsdecartographieweb-webmappingapplications@ec.gc.ca?subject=Request%20for%20a%20RAMP%20demo&body=Describe%20your%20business requirements%20to%20the%20RAMP%20development%20team.%20Someone%20will%20reach%20out%20to%20you%20soon%20to%20schedule%20a%20demonstration%20and%20discuss%20your%20needs!"
+                    :href="`mailto:${links[$i18n.locale].email}?subject=${$t(
+                        'email.subject'
+                    )}&body=${$t('email.body')}`"
                 >
                     {{ $t('button.requestDemo') }}
                 </a>
@@ -29,7 +33,8 @@
         <div class="flex text-xl py-[20px] bg-gray-600 justify-center">
             <div
                 class="
-                    flex flex-wrap
+                    !flex
+                    flex-wrap
                     sm:flex-nowrap
                     justify-center
                     items-center
@@ -42,18 +47,34 @@
                         src="../assets/logo-no-text.svg"
                         class="w-[100px] h-[100px] !m-0"
                     />
-                    <div class="flex flex-col justify-center">
-                        <h1 class="!my-0 !font-semibold ml-[-3px] !text-4xl">
+                    <div class="flex flex-col justify-center text-white">
+                        <h1
+                            class="
+                                !my-0
+                                !font-semibold
+                                ml-[-3px]
+                                !text-[36px]
+                                !leading-[40px]
+                                border-0
+                                pb-0
+                            "
+                        >
                             {{ $t('header.title') }}
                         </h1>
-                        <p class="!text-white text-xl !my-0">
+                        <p class="text-[20px] !my-0">
                             {{ $t('header.subtitle') }}
                         </p>
                     </div>
                 </a>
                 <a
                     href="https://github.com/fgpv-vpgf"
-                    class="!text-white sm:ml-auto self-center text-2xl"
+                    class="
+                        !text-white
+                        sm:ml-auto
+                        self-center
+                        !text-[24px]
+                        !leading=[32px]
+                    "
                 >
                     {{ $t('header.github') }}
                 </a>
@@ -65,12 +86,21 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+import { links } from '@/configs/links';
+
 @Component
-export default class RampFooterV extends Vue {}
+export default class RampFooterV extends Vue {
+    links = links;
+}
 </script>
 
 <style scoped lang="scss">
 .map-banner {
     background-image: url('../assets/banner.png');
+}
+a,
+p,
+h1 {
+    font-family: inherit !important;
 }
 </style>

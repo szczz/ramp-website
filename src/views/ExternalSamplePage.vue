@@ -1,5 +1,18 @@
 <template>
     <div class="external_sample">
+        <div class="!container mx-auto prose my-[40px]">
+            <h2 class="!text-[24px] !leading-[32px]">
+                {{ $t(`feature.${config}.title`) }}
+            </h2>
+            <description-block
+                class="!max-w-full text-[20px]"
+                :path="`feature.${config}.description`"
+            ></description-block>
+            <description-block
+                class="!max-w-full text-[20px]"
+                :path="`sample.${config}.description`"
+            ></description-block>
+        </div>
         <div id="def-top">
             <!-- Write closure fall-back static file -->
             <ul id="wb-tphp">
@@ -411,10 +424,13 @@
 // @ is an alias to /src
 import RampMapV from '@/components/map.vue';
 
+import DescriptionBlockV from '@/components/info/description-block.vue';
+
 export default {
     name: 'ExternalSamples',
     components: {
-        'ramp-map': RampMapV
+        'ramp-map': RampMapV,
+        'description-block': DescriptionBlockV
     },
     props: ['config']
 };

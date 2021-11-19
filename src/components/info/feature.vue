@@ -24,37 +24,10 @@
                     <h2>
                         {{ $t(`feature.${section.key}.title`) }}
                     </h2>
-                    <i18n
+                    <description-block
                         :path="`feature.${section.key}.description`"
                         class="!mb-[36px]"
-                        tag="p"
-                    >
-                        <template #br><br /><br /></template>
-                        <template #cam
-                            ><a
-                                class="text-link"
-                                :href="links[$i18n.locale]['cam']"
-                                target="_blank"
-                                >{{ $t('links.label.cam') }}</a
-                            ></template
-                        >
-                        <template #cesi
-                            ><a
-                                class="text-link"
-                                :href="links[$i18n.locale]['cesi']"
-                                target="_blank"
-                                >{{ $t('links.label.cesi') }}</a
-                            ></template
-                        >
-                        <template #geomet
-                            ><a
-                                class="text-link"
-                                :href="links[$i18n.locale]['geomet']"
-                                target="_blank"
-                                >{{ $t('links.label.geomet') }}</a
-                            ></template
-                        >
-                    </i18n>
+                    ></description-block>
                     <router-link
                         class="
                             bg-teal
@@ -68,7 +41,7 @@
                             whitespace-nowrap
                         "
                         :to="{
-                            path: `/samples/${section.config}`,
+                            path: `/samples/${section.key}`,
                             query: { lang: $i18n.locale }
                         }"
                         target="_blank"
@@ -89,14 +62,17 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { links } from '@/configs/links';
 
-@Component
+import DescriptionBlockV from './description-block.vue';
+
+@Component({
+    components: {
+        'description-block': DescriptionBlockV
+    }
+})
 export default class InfoFeatureV extends Vue {
     @Prop() section!: any;
     @Prop() index!: number;
-
-    links = links;
 }
 </script>
 
