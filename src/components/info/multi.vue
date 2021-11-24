@@ -24,6 +24,7 @@
                         </h3>
                         <img
                             :src="`./img/${subSection}.svg`"
+                            alt=""
                             class="!mb-0 h-[200px] inline-flex py-[40px]"
                         />
                         <p class="!mb-[32px]">
