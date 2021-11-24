@@ -18,7 +18,10 @@
                     class="image-container md:mr-[40px]"
                     v-if="index % 2 !== 0"
                 >
-                    <img :src="`./img/${section.index}.png`" />
+                    <img
+                        :src="`./img/${section.index}.png`"
+                        :alt="$t(`feature.${section.key}.imageDesc`)"
+                    />
                 </div>
                 <div class="flex-1" :class="{ 'text-right': index % 2 !== 0 }">
                     <h2>
@@ -53,7 +56,10 @@
                     class="image-container md:ml-[40px]"
                     v-if="index % 2 === 0"
                 >
-                    <img :src="`./img/${section.index}.png`" />
+                    <img
+                        :src="`./img/${section.index}.png`"
+                        :alt="$t(`feature.${section.key}.imageDesc`)"
+                    />
                 </div>
             </div>
         </div>

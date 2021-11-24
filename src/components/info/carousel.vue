@@ -12,6 +12,13 @@
                             :src="`./img/carousel-${
                                 section.index[num - 1]
                             }.png`"
+                            :alt="
+                                $t(
+                                    `carousel.${
+                                        section.keys[num - 1]
+                                    }.imageDesc`
+                                )
+                            "
                         />
                         <div class="max-w-none my-[20px]">
                             <h3>

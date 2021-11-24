@@ -19,6 +19,7 @@
                         <img
                             :src="`./img/${subSection}.svg`"
                             class="h-[120px] !mb-0 inline-flex"
+                            alt=""
                         />
                         <h3>
                             {{

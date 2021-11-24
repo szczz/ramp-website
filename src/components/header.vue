@@ -7,7 +7,7 @@
         >
         <div
             class="
-                container
+                !container
                 mx-auto
                 flex
                 justify-center
@@ -20,6 +20,7 @@
                 <img
                     src="../assets/logo-no-text.svg"
                     class="w-[100px] h-[100px] !m-0"
+                    alt=""
                 />
                 <div class="flex flex-col justify-center text-black">
                     <h1
@@ -41,7 +42,13 @@
                 </div>
             </a>
             <div class="lg:ml-auto flex mb-[8px] !text-[16px]">
-                <a class="button" href="#features">
+                <a
+                    class="button cursor-pointer"
+                    @click="scrollToFeatures()"
+                    @keypress.enter="scrollToFeatures()"
+                    tabindex="0"
+                    v-if="$router.currentRoute.name === 'Home'"
+                >
                     {{ $t('header.features') }}
                 </a>
                 <a class="button" href="https://github.com/fgpv-vpgf">
@@ -74,6 +81,13 @@ export default class RampHeaderV extends Vue {
 
         this.$router.replace({ query: { lang: this.$i18n.locale } });
         document.title = this.$i18n.t('page.title') as string;
+        document.documentElement.lang = this.$i18n.locale;
+    }
+
+    scrollToFeatures() {
+        const el = document.querySelector('div#features') as HTMLElement;
+
+        window.scrollTo(0, el.offsetTop);
     }
 }
 </script>

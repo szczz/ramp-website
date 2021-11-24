@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <ramp-map :shadow="true"
+        <ramp-map :shadow="true" :key="$i18n.locale"
             ><div
                 class="
                     flex
