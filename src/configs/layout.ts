@@ -31,6 +31,11 @@ export const layout = [
         index: '4'
     },
     {
+        type: FEATURE,
+        key: 'storyramp',
+        index: '5'
+    },
+    {
         type: FEATURE_COLLECTION,
         keys: ['implement', 'clipnship', 'plugins']
     },
