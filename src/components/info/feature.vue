@@ -31,7 +31,7 @@
                         :path="`feature.${section.key}.description`"
                         class="!mb-[36px]"
                     ></description-block>
-                    <router-link
+                    <a
                         class="
                             bg-teal
                             py-[12px]
@@ -43,14 +43,11 @@
                             !no-underline
                             whitespace-nowrap
                         "
-                        :to="{
-                            path: `/samples/${section.key}`,
-                            query: { lang: $i18n.locale }
-                        }"
+                        :href="links[$i18n.locale].demo[section.key]"
                         target="_blank"
                     >
                         {{ $t('button.viewDemo') }}
-                    </router-link>
+                    </a>
                 </div>
                 <div
                     class="image-container md:ml-[40px]"
@@ -70,6 +67,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import DescriptionBlockV from './description-block.vue';
+import { links } from '@/configs/links';
 
 @Component({
     components: {
@@ -79,6 +77,8 @@ import DescriptionBlockV from './description-block.vue';
 export default class InfoFeatureV extends Vue {
     @Prop() section!: any;
     @Prop() index!: number;
+
+    links = links;
 }
 </script>
 
