@@ -14,7 +14,7 @@
                         class="!mb-[36px]"
                         :path="`feature.${key}.description`"
                     ></description-block>
-                    <router-link
+                    <a
                         class="
                             bg-teal
                             py-[12px]
@@ -26,17 +26,11 @@
                             !no-underline
                             whitespace-nowrap
                         "
-                        :to="{
-                            path:
-                                (index === 0
-                                    ? `/external_samples/`
-                                    : `/samples/`) + `${key}`,
-                            query: { lang: $i18n.locale }
-                        }"
+                        :href="links[$i18n.locale].demo[key]"
                         target="_blank"
                     >
                         {{ $t('button.viewDemo') }}
-                    </router-link>
+                    </a>
                 </div>
             </div>
         </div>
@@ -47,6 +41,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import DescriptionBlockV from './description-block.vue';
+import { links } from '@/configs/links';
 
 @Component({
     components: {
@@ -56,6 +51,8 @@ import DescriptionBlockV from './description-block.vue';
 export default class InfoFeatureCollectionV extends Vue {
     @Prop() section!: any;
     @Prop() index!: number;
+
+    links = links;
 }
 </script>
 
