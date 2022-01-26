@@ -10,6 +10,8 @@ export const links = {
             context: '#/samples/context',
             accessibility: '#/samples/accessibility',
             mobile: '#/samples/mobile',
+            storyramp:
+                'https://ecdc-webmappingappsstoryramp-asv.azurewebsites.net/#/en/f6f7baf4-cccb-4521-a037-b4691b0f0d49',
             implement: '#/external_samples/implement',
             clipnship: '#/samples/clipnship',
             plugins: '#/samples/plugins'
@@ -26,6 +28,8 @@ export const links = {
             context: '#/samples/context?lang=fr',
             accessibility: '#/samples/accessibility?lang=fr',
             mobile: '#/samples/mobile?lang=fr',
+            storyramp:
+                'https://ecdc-webmappingappsstoryramp-asv.azurewebsites.net/#/en/f6f7baf4-cccb-4521-a037-b4691b0f0d49',
             implement: '#/external_samples/implement?lang=fr',
             clipnship: '#/samples/clipnship?lang=fr',
             plugins: '#/samples/plugins?lang=fr'
