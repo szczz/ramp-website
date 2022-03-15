@@ -49,8 +49,8 @@ export const layout = [
     },
     {
         type: CAROUSEL,
-        keys: ['cccs', 'cesi', 'cam', 'openmaps'],
-        index: [1, 2, 3, 4]
+        keys: ['cccs', 'cesi', 'cam', 'openmaps', 'storylines'],
+        index: [1, 2, 3, 4, 5]
     },
     {
         type: MULTI,

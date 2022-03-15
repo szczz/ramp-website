@@ -6,7 +6,7 @@
         <div class="container mx-auto">
             <div class="glider-contain !w-[80%] !max-w-[800px]">
                 <div class="glider">
-                    <div v-for="num in [1, 2, 3, 4]" :key="num">
+                    <div v-for="num in [1, 2, 3, 4, 5]" :key="num">
                         <img
                             class="w-full"
                             :src="`./img/carousel-${

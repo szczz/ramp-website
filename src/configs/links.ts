@@ -11,7 +11,7 @@ export const links = {
             accessibility: '#/samples/accessibility',
             mobile: '#/samples/mobile',
             storyramp:
-                'https://ecdc-webmappingappsstoryramp-asv.azurewebsites.net/#/en/f6f7baf4-cccb-4521-a037-b4691b0f0d49',
+                'https://environmental-maps.canada.ca/RAMP-Storylines/index-ca-en.html#/en/410b88da-0ed1-4749-903f-5e76c24e2e5f',
             implement: '#/external_samples/implement',
             clipnship: '#/samples/clipnship',
             plugins: '#/samples/plugins'
@@ -29,7 +29,7 @@ export const links = {
             accessibility: '#/samples/accessibility?lang=fr',
             mobile: '#/samples/mobile?lang=fr',
             storyramp:
-                'https://ecdc-webmappingappsstoryramp-asv.azurewebsites.net/#/en/f6f7baf4-cccb-4521-a037-b4691b0f0d49',
+                'https://cartes-environnementales.canada.ca/Scenarios-de-PCAR/index-ca-fr.html#/fr/410b88da-0ed1-4749-903f-5e76c24e2e5f',
             implement: '#/external_samples/implement?lang=fr',
             clipnship: '#/samples/clipnship?lang=fr',
             plugins: '#/samples/plugins?lang=fr'
