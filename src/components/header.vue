@@ -20,7 +20,7 @@
                 <img
                     src="../assets/logo-no-text.svg"
                     class="w-[100px] h-[100px] !m-0"
-                    alt=""
+                    alt="Logo for RAMP"
                 />
                 <div class="flex flex-col justify-center text-black">
                     <h1
