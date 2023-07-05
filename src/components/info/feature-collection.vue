@@ -1,9 +1,27 @@
 <template>
     <div class="section py-[150px]">
         <div class="container mx-auto">
-            <div class="text-center md:flex mx-auto gap-[80px] w-[80%]">
+            <div
+                class="
+                    text-center
+                    md:flex
+                    mx-auto
+                    gap-[80px]
+                    w-[80%]
+                    flex-wrap
+                    justify-center
+                "
+            >
                 <div
-                    class="flex-1 mb-[60px] md:mb-auto"
+                    class="
+                        flex flex-col
+                        items-center
+                        mx-4
+                        mb-[60px]
+                        mw-[325px]
+                        md:w-auto
+                        flex-1 flex-basis-0
+                    "
                     v-for="(key, index) in section.keys"
                     :key="key + index"
                 >
@@ -11,7 +29,7 @@
                         {{ $t(`feature.${key}.title`) }}
                     </h2>
                     <description-block
-                        class="!mb-[36px]"
+                        class="!mb-[36px] flex-1"
                         :path="`feature.${key}.description`"
                     ></description-block>
                     <a
