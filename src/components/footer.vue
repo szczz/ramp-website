@@ -68,7 +68,7 @@
                     </div>
                 </a>
                 <a
-                    href="https://github.com/fgpv-vpgf"
+                    href="https://github.com/ramp4-pcar4"
                     class="
                         !text-white
                         sm:ml-auto
@@ -76,8 +76,15 @@
                         !text-[24px]
                         !leading=[32px]
                     "
+                    title="GitHub"
+                    aria-label="GitHub"
+                    role="button"
                 >
-                    {{ $t('header.github') }}
+                    <font-awesome-icon
+                        icon="fa-brands fa-github"
+                        style="color: #ffffff"
+                        class="w-12 h-12"
+                    />
                 </a>
             </div>
         </div>
