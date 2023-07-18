@@ -53,8 +53,6 @@
                         </div>
                     </div>
                 </div>
-                <!--button aria-label="Previous" class="glider-prev">«</button-->
-                <!--button aria-label="Next" class="glider-next">»</button-->
                 <div role="tablist" class="dots"></div>
             </div>
         </div>
@@ -79,10 +77,6 @@ export default class CarouselV extends Vue {
             scrollLockDelay: 0,
             dots: '.dots',
             draggable: true
-            /* arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            } */
         });
     }
 }
@@ -91,11 +85,8 @@ export default class CarouselV extends Vue {
 <style lang="scss">
 .glider-dot {
     @apply bg-green border border-solid border-gray-500 w-[20px] h-[20px] #{!important};
-    &:focus {
-        @apply border-black border-2 #{!important};
-    }
     &.active {
-        @apply saturate-200 border-2 #{!important};
+        @apply saturate-200 border-black border-2 #{!important};
     }
 }
 
