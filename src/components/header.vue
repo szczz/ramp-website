@@ -51,8 +51,19 @@
                 >
                     {{ $t('header.features') }}
                 </a>
-                <a class="button" href="https://github.com/fgpv-vpgf">
-                    {{ $t('header.github') }}
+                <a
+                    class="button"
+                    href="https://github.com/ramp4-pcar4"
+                    style="margin-right: 15px"
+                    title="GitHub"
+                    aria-label="GitHub"
+                    role="button"
+                >
+                    <font-awesome-icon
+                        icon="fa-brands fa-github"
+                        style="color: #000000"
+                        class="w-12 h-12"
+                    />
                 </a>
                 <a
                     class="button font-bold border-4 border-black"
