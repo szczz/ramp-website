@@ -1,0 +1,46 @@
+name: Deploy to GH Pages
+
+on:
+    pull_request_target:
+        types: [opened, synchronize, reopened]
+
+    push:
+        branches:
+            - 'master'
+        tags:
+            - v**
+
+jobs:
+    build:
+        name: Develop build for demo files
+        uses: ./.github/workflows/build.yml
+        with:
+            cache_sha: ${{ format('{0}-{1}', github.ref_name, github.event.pull_request.head.sha || github.sha) }}
+
+    post-build:
+        name: Cache dist
+        needs: [build]
+        if: |
+            always() &&
+            (needs.build.result == 'success' || needs.build.result == 'skipped')
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get files
+              uses: actions/cache@v3
+              with:
+                  path: dist
+                  key: dist-${{ format('{0}-{1}', github.ref_name, github.event.pull_request.head.sha || github.sha) }}
+
+            - name: Cache dist files
+              uses: actions/cache@v3
+              with:
+                  path: dist
+                  key: dist-${{ format('{0}-{1}', github.ref_name, github.event.pull_request.head.sha || github.sha) }}
+
+    deploy-pages:
+        needs: [post-build]
+        if: always() && (needs.post-build.result == 'success')
+        name: Deploy the files
+        uses: ./.github/workflows/pages.yml
+        with:
+            cache_sha: ${{ format('{0}-{1}', github.ref_name, github.event.pull_request.head.sha || github.sha) }}
