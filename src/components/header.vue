@@ -3,6 +3,7 @@
         <span class="flex"
             ><button class="ml-auto mr-[20px] underline" @click="changeLang()">
                 {{ $t('header.changeLang') }}
+                Test
             </button></span
         >
         <div
