@@ -26,6 +26,15 @@
 <script lang="ts">
 import { Component, Watch, Vue } from 'vue-property-decorator';
 
+import Highcharts from 'highcharts';
+import dataModule from 'highcharts/modules/data';
+import exporting from 'highcharts/modules/exporting';
+import exportData from 'highcharts/modules/export-data';
+
+dataModule(Highcharts);
+exporting(Highcharts);
+exportData(Highcharts);
+
 @Component({})
 export default class StorylinesV extends Vue {
     config: any = undefined;
@@ -41,7 +50,6 @@ export default class StorylinesV extends Vue {
     }
 
     created(): void {
-        console.log(this);
         this.lang = this.$router.currentRoute.query['lang']
             ? (this.$router.currentRoute.query['lang'] as string)
             : this.lang;
