@@ -127,11 +127,15 @@ export default class InfoFeatureV extends Vue {
     }
 
     beforeUpdate() {
-        this.previousScrollPosition = window.scrollY;
+        if (this.isVisible) {
+            this.previousScrollPosition = window.scrollY;
+        }
     }
 
     updated() {
-        window.scrollTo(0, this.previousScrollPosition);
+        if (this.isVisible) {
+            window.scrollTo(0, this.previousScrollPosition);
+        }
     }
 
     mounted() {
@@ -139,11 +143,15 @@ export default class InfoFeatureV extends Vue {
             this.show = true;
         }, 1500);
 
+        let timeoutID = 0;
         const callback = (entries: any) => {
             const [entry] = entries;
             if (entry.isIntersecting) {
-                this.isVisible = true;
+                timeoutID = setTimeout(() => {
+                    this.isVisible = true;
+                }, 500);
             } else {
+                clearTimeout(timeoutID);
                 this.isVisible = false;
                 this.version = 4;
             }
