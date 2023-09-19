@@ -5,10 +5,10 @@
             "fixtures": {
                 "geosearch": {
                     "serviceUrls": {
-                        "geoNames": "http://geogratis.gc.ca/services/geoname/en/geonames.json",
-                        "geoLocation": "http://geogratis.gc.ca/services/geolocation/en/locate?q=",
-                        "geoProvince": "http://geogratis.gc.ca/services/geoname/en/codes/province.json",
-                        "geoTypes": "http://geogratis.gc.ca/services/geoname/en/codes/concise.json"
+                        "geoNames": "https://geogratis.gc.ca/services/geoname/en/geonames.json",
+                        "geoLocation": "https://geogratis.gc.ca/services/geolocation/en/locate?q=",
+                        "geoProvince": "https://geogratis.gc.ca/services/geoname/en/codes/province.json",
+                        "geoTypes": "https://geogratis.gc.ca/services/geoname/en/codes/concise.json"
                     }
                 },
                 "export": {
