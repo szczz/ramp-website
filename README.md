@@ -22,5 +22,9 @@ yarn build
 yarn lint
 ```
 
+## Updating RAMP versions
+The marketing site now contains instances of both RAMP2 and RAMP4. Both versions use a global variable called ```RAMP``` and will cause a conflict. 
+When updating ramp.js to the latest version, you will need to update the variable name to ```RAMP4``` at the top of the script.
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
